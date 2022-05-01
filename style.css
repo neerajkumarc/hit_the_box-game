@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.gamebox {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  gap: 30px;
+}
+
+.container {
+  height: 306px;
+  width: 306px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hide {
+  display: none;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  border: 1px solid white;
+  transition: all 0.2s;
+}
+.square:hover {
+  cursor: pointer;
+}
+.mole:active {
+  transform: scale(0.9);
+}
+.mole {
+  background-color: blueviolet;
+}
+
+.btn {
+  width: 90px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.btn {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  animation: glowshadow 1.5s alternate infinite;
+}
+.btn:hover {
+  color: black;
+  background: white;
+  animation: none;
+  box-shadow: 0 0 5px white, 0 0 20px white, 0 0 40px white;
+}
+@keyframes glowshadow {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0 0 5px white, 0 0 20px white;
+  }
+}
