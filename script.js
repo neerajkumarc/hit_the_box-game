@@ -48,7 +48,7 @@ medium.addEventListener("click", () => {
 });
 
 hard.addEventListener("click", () => {
-  moveMole(550);
+  moveMole(600);
 });
 
 function countDown() {
