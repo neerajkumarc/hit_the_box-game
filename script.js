@@ -11,7 +11,6 @@ let hitPosition;
 let currentTime = 60;
 let timerId = null;
 let countDownTimer;
-var audio = new Audio("/sounds/music.wav");
 
 function randomSquare() {
   square.forEach((square) => {
@@ -26,29 +25,11 @@ function randomSquare() {
 square.forEach((square) => {
   square.addEventListener("mousedown", () => {
     if (square.id == hitPosition) {
-      audio.play();
       result++;
       score.textContent = result;
       hitPosition = null;
     }
   });
-});
-
-function moveMole(time) {
-  timerId = setInterval(randomSquare, time);
-  countDownTimer = setInterval(countDown, 1000);
-  container.classList.remove("hide");
-}
-easy.addEventListener("click", () => {
-  moveMole(750);
-});
-
-medium.addEventListener("click", () => {
-  moveMole(650);
-});
-
-hard.addEventListener("click", () => {
-  moveMole(600);
 });
 
 function countDown() {
@@ -65,3 +46,21 @@ function countDown() {
     }
   }
 }
+
+function moveMole(time) {
+  timerId = setInterval(randomSquare, time);
+  countDownTimer = setInterval(countDown, 1000);
+  container.classList.remove("hide");
+  document.querySelector(".level").style.display = "none";
+}
+easy.addEventListener("click", () => {
+  moveMole(750);
+});
+
+medium.addEventListener("click", () => {
+  moveMole(650);
+});
+
+hard.addEventListener("click", () => {
+  moveMole(600);
+});

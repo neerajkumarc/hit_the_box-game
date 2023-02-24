@@ -37,8 +37,8 @@ body {
 .square:hover {
   cursor: pointer;
 }
-.mole:active {
-  transform: scale(0.99);
+.mole:active{
+  background-color: green;
 }
 .mole {
   background-color: blueviolet;
