@@ -36,6 +36,10 @@ function countDown() {
   currentTime--;
   time.textContent = currentTime;
 
+  if(currentTime < 10){
+    time.style.color = "red"
+  }
+
   if (currentTime == 0) {
     clearInterval(countDownTimer);
     clearInterval(timerId);
